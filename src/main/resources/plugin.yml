@@ -4,11 +4,3 @@ version: 1.4.3
 author: OpenSource
 
 softdepend: [PlaceholderAPI]
-
-commands:
-  servers:
-    usage: /servers
-    description: Opens up server selector GUI
-    aliases:
-      - menu
-      - opengui

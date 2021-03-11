@@ -4,6 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+
+    <groupId>PlayerServersHubCore</groupId>
+    <artifactId>PlayerServersHubCore</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.resources.sourceEncoding>UTF-8</project.resources.sourceEncoding>
+    </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -12,7 +22,32 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                    <encoding>UTF-8</encoding>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <artifactSet>
+                                <includes>
+                                    <include>com.samjakob:SpiGUI</include>
+                                    <include>com.zaxxer:HikariCP</include>
+                                    <include>com.github.cryptomorin:XSeries</include>
+                                    <include>org.slf4j:slf4j-simple</include>
+                                    <include>org.slf4j:slf4j-api</include>
+                                    <include>com.qrakn:honcho</include>
+                                </includes>
+                            </artifactSet>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
@@ -21,6 +56,10 @@
         <repository>
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
+        </repository>
+        <repository>
+            <id>placeholderapi</id>
+            <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
         </repository>
     </repositories>
 
@@ -48,13 +87,30 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.12</version>
+            <version>1.18.18</version>
+        </dependency>
+        <dependency>
+            <groupId>com.samjakob</groupId>
+            <artifactId>SpiGUI</artifactId>
+            <version>v1.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot</artifactId>
+            <version>1.8.8-R0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>me.clip</groupId>
+            <artifactId>placeholderapi</artifactId>
+            <version>2.10.9</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.qrakn</groupId>
+            <artifactId>honcho</artifactId>
+            <version>1.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
-
-    <groupId>PlayerServersHubCore</groupId>
-    <artifactId>PlayerServersHubCore</artifactId>
-    <version>1.0-SNAPSHOT</version>
 
     
 </project>

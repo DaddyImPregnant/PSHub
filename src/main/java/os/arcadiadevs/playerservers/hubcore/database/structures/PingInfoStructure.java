@@ -1,26 +1,13 @@
 package os.arcadiadevs.playerservers.hubcore.database.structures;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
 public class PingInfoStructure {
 
-    private final int online;
-    private final int max;
-    private final String MOTD;
-
-    public PingInfoStructure(int online, int max, String MOTD) {
-        this.online = online;
-        this.max = max;
-        this.MOTD = MOTD;
-    }
-
-    public int getMax() {
-        return max;
-    }
-
-    public int getOnline() {
-        return online;
-    }
-
-    public String getMOTD() {
-        return MOTD;
-    }
+    private int online;
+    private int max;
+    private String MOTD;
 }

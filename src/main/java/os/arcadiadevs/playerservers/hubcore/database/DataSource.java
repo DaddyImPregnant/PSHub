@@ -12,7 +12,6 @@ public class DataSource
 
     public static HikariDataSource hikari;
 
-    @SuppressWarnings("ConstantConditions")
     public void registerDataSource() throws SQLException {
 
         Plugin pl = Bukkit.getPluginManager().getPlugin("PSHubCore");
