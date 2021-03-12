@@ -61,6 +61,10 @@
             <id>placeholderapi</id>
             <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
         </repository>
+        <repository>
+            <id>mizule</id>
+            <url>https://repo.daddyimpregnant.com/repository/mizule/</url>
+        </repository>
     </repositories>
 
     <dependencies>
