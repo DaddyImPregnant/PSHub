@@ -1,4 +1,4 @@
-# Player Servers Hubcore [![Maven Package](https://github.com/DaddyImPregnant/PSHub/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/DaddyImPregnant/PSHub/actions/workflows/maven-publish.yml)
+# Player Servers Hubcore [![Build Status](https://ci.mizuledevelopment.com/buildStatus/icon?job=PSHub)](https://ci.mizuledevelopment.com/job/PSHub/)
 
 A fork of the PlayerServers [hub core](https://gitlab.com/OpenSource02/pshubcore)
 
